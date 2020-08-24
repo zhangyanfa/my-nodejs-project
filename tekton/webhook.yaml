@@ -48,10 +48,10 @@ spec:
           - name: my-nodejs-git
             resourceRef:
               name: my-nodejs-git
-          - name: nodejs-image-dev
+          - name: my-nodejs-image-dev
             resourceRef:
               name: my-nodejs-image-dev
-          - name: nodejs-image-stage
+          - name: my-nodejs-image-stage
             resourceRef:
               name: my-nodejs-image-stage
         params:
