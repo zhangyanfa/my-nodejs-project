@@ -1,0 +1,33 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: my-nodejs-git
+spec:
+  type: git
+  params:
+    - name: revision
+      value: master
+    - name: url
+      value: git@gitlab.icc:yanfaz/my-nodejs-project.git
+---
+
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: my-nodejs-image-dev
+spec:
+  type: image
+  params:
+    - name: url
+      value: image-registry.openshift-image-registry.svc:5000/env-dev/my-nodejs
+---
+
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: my-nodejs-image-stage
+spec:
+  type: image
+  params:
+    - name: url
+      value: image-registry.openshift-image-registry.svc:5000/env-stage/my-nodejs

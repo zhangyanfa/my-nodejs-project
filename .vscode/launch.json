@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Appsody: Attach node debugger",
+            "type": "node",
+            "request": "attach",
+            "port": 9229,
+            "remoteRoot": "/project/user-app",
+            "localRoot": "${workspaceFolder}",
+            "protocol": "inspector"
+        },
+        {
+            "type": "node",
+            "name": "Debug my-nodejs-project",
+            "request": "attach",
+            "address": "127.0.0.1",
+            "localRoot": "/Users/yanfa/dev/cp4app/my-nodejs-project",
+            "remoteRoot": "/project/user-app",
+            "restart": true
+        }
+    ]
+}
