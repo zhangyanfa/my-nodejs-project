@@ -1,3 +1,3 @@
 id: "20200818081916.36342000"
-project-name: kabanero
+project-name: kabanero-sample
 stack: docker.io/appsody/nodejs-express:0.4
